@@ -4,7 +4,7 @@ function createMenu() {
     const menuData = [{
     // deerioca data
         className: "deerioca-section",
-        title: "Brown Sugar Deerioca Series",
+        title: ["Brown Sugar Deerioca Series", "黑糖鹿丸系列"],
         items: [
         "Deerioca Fever (Fresh Milk / Soy Milk)",
         "Deerioca Matcha (Fresh Milk / Soy Milk)",
@@ -14,7 +14,7 @@ function createMenu() {
     {
         // crunchy data
         className: "crunchy-section",
-        title: "Crunchy Milk Tea Series",
+        title: ["Crunchy Milk Tea Series", "白霜脆奶系列"],
         items: [
         "Crunchy Tiramisu Milk Tea",
         "Crunchy Brown Sugar Milk Tea",
@@ -24,7 +24,7 @@ function createMenu() {
     {
         // milktea data
         className: "milktea-section",
-        title: "Milk Tea / Latte Series",
+        title: ["Milk Tea / Latte Series", "濃醇奶香 / 拿鐵系列"],
         items: [
         "The Alley Trio Milk Tea",
         "Royal No.9 Milk Tea",
@@ -37,7 +37,7 @@ function createMenu() {
     {
         // specialty data
         className: "specialty-section",
-        title: "The Alley Specialty",
+        title: ["The Alley Specialty", "鹿角特調系列"],
         items: [
         "Snow Strawberry Lulu",
         "Passionfruit Green Tea",
@@ -56,10 +56,14 @@ function createMenu() {
         const section = document.createElement("section");
         section.classList.add(className);
 
-        
-        const section_title = document.createElement("h2");
-        section_title.textContent = title;
-        section.append( section_title);
+        const section_title_container = document.createElement("div");
+        section_title_container.classList.add("title");
+        title.forEach(name => {
+            const section_title = document.createElement("p");
+            section_title.textContent = name;
+            section_title_container.append(section_title);
+        });
+        section.append(section_title_container);
 
         const ul = document.createElement("ul");
         items.forEach(item => {
