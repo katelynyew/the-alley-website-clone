@@ -1,11 +1,11 @@
-import titleImg from "../public/assets/images/about-title.png"
-
+import titleImg from "./assets/images/about-title.png"
+import aboutBg from "./assets/images/about.jpg"
 function createAbout() {
     const scrollContainer = document.createElement("div");
     scrollContainer.classList.add("scroll-container");
 
     const about = document.createElement("div");
-    about.style.backgroundImage = "url(/assets/images/about.jpg)";
+    about.style.backgroundImage = `url(${aboutBg})`;
     about.setAttribute("id", "about");
     scrollContainer.append(about);
     const ul = document.createElement("ul");

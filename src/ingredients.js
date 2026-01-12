@@ -1,11 +1,11 @@
-import sugarImg from "../public/assets/images/sugar.png"
-import pearlImg from "../public/assets/images/pearl.png"
-import leavesImg from "../public/assets/images/leaves.png"
-
+import sugarImg from "./assets/images/sugar.png"
+import pearlImg from "./assets/images/pearl.png"
+import leavesImg from "./assets/images/leaves.png"
+import ingredientBg from "./assets/images/intro_bg.jpg"
 function createIngredient() {
     const ingredients = document.createElement("div");
     ingredients.classList.add("ingredients");
-    ingredients.style.backgroundImage = "url(assets/images/intro_bg.jpg)";
+    ingredients.style.backgroundImage = `url(${ingredientBg})`;
 
     const ingredientContainer = document.createElement("div");
     ingredientContainer.classList.add("container");

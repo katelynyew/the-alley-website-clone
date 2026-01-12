@@ -1,4 +1,4 @@
-import map from "../public/assets/images/google_map.jpg"
+import map from "./assets/images/google_map.jpg"
 
 function createStore() {
     const storeData = [

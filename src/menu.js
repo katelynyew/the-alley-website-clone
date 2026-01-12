@@ -1,4 +1,4 @@
-import mark from "../public/assets/images/menu-mark.svg"
+import mark from "./assets/images/menu-mark.svg"
 
 function createMenu() {
     const menuData = [{

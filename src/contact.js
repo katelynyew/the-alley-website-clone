@@ -1,9 +1,9 @@
-
+import contactBg from "./assets/images/contact.jpg"
 
 function createContact() {
     const contactContainer = document.createElement("div");
     contactContainer.setAttribute("id", "contact");
-    contactContainer.style.backgroundImage = "url(/assets/images/contact.jpg)";
+    contactContainer.style.backgroundImage = `url(${contactBg})`;
     const contactLi = document.createElement("ul");
     contactLi.classList.add("contact-list");
     contactContainer.append(contactLi);
