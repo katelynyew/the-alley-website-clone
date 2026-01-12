@@ -10,8 +10,10 @@ function createContact() {
     const franchise = document.createElement("a");
     franchise.setAttribute("href", "https://www.the-alley.ca/form/join-form.aspx");
     franchise.textContent = "Franchise Inquiry";
+    franchise.setAttribute("target", "_blank");
     const hiring = document.createElement("a");
     hiring.setAttribute("href", "https://www.the-alley.ca/form/job-form.aspx");
+    hiring.setAttribute("target", "_blank");
     hiring.textContent = "Hiring";
     contactLi.append(franchise, hiring);
 

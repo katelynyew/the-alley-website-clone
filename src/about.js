@@ -1,9 +1,13 @@
 import titleImg from "../public/assets/images/about-title.png"
 
 function createAbout() {
+    const scrollContainer = document.createElement("div");
+    scrollContainer.classList.add("scroll-container");
+
     const about = document.createElement("div");
     about.style.backgroundImage = "url(/assets/images/about.jpg)";
     about.setAttribute("id", "about");
+    scrollContainer.append(about);
     const ul = document.createElement("ul");
     const titleLi = document.createElement("li");
     const titleImage = document.createElement("img");
@@ -22,7 +26,7 @@ function createAbout() {
     ul.append(titleLi, textLi);
     about.append(ul);
 
-    return about;
+    return scrollContainer;
 }
 
 export default createAbout;

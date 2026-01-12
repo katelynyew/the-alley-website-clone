@@ -5,7 +5,7 @@ import createMenu from "./menu.js"
 import createIngredient from "./ingredients.js"
 import createContact from "./contact.js"
 import createStore from "./store.js"
-
+import setUpAboutScroll from "./aboutScroll.js"
 console.log("self compassion");
 
 

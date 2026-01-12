@@ -1,6 +1,4 @@
-
 import map from "../public/assets/images/google_map.jpg"
-
 
 function createStore() {
     const storeData = [
@@ -13,7 +11,9 @@ function createStore() {
             "Fri - 11:30am - 10:00pm",
             "Sun - 11:00am - 10:00pm",
             "Sun - 11:00am -  9:00pm"
-    ]},
+        ],
+        link: "https://goo.gl/maps/KhJT2JVvKHYuZZLUA"
+},
     {
         name: "Brampton",
         address: "Unit 3 - 10025 Hurontario Street, Brampton, ON L6Z 0E6",
@@ -21,7 +21,9 @@ function createStore() {
         open: [
             "Sun - Thurs 12:00pm - 10:00pm",
             "Fri - Sat 12:00pm - 12:00am"
-    ]},
+        ],
+        link: "https://goo.gl/maps/qHmgCgT2HC8FEqMi7"
+},
     {
         name: "Guelph",
         address: "U92 Gordon St, Guelph, ON N1H 4H6",
@@ -29,22 +31,18 @@ function createStore() {
         open: [
             "Fri - Sat 11:30am - 11:30pm",
             "Sun - 11:30am - 9:00pm"
-    ]},
-    {
-        name: "Guelph",
-        address: "U92 Gordon St, Guelph, ON N1H 4H6",
-        tel: "(519) 265-9868",
-        open: [
-            "Fri - Sat 11:30am - 11:30pm",
-            "Sun - 11:30am - 9:00pm"]
-    },
+    ],
+        link: "https://goo.gl/maps/NjauGWHRjMdHyCFA6"
+},
+  
     {
         name: "Hamilton",
         address: "Unit 5 - 1050 King Street W, Hamilton, ON L8S 1L5",
         tel: "(905) 522-5300",
         open: [
             "Daily - 11:30am - 11:00pm"
-        ]
+        ],
+        link: "https://goo.gl/maps/szbUqkDXDbDFfoJd8"
     },
     {
         name: "Markham - Gibson",
@@ -53,7 +51,8 @@ function createStore() {
         open: [
             "Sun - Thurs 11:30am - 10:00pm",
             "Fri & Sat 11:30am - 11:00pm"
-        ]
+        ],
+        link: "https://goo.gl/maps/jYQTBJJj53nqDTsx5"
     },
     {
         name: "Missisauga - Erin Mills",
@@ -63,7 +62,8 @@ function createStore() {
             "Mon - Thurs 12:00pm - 9:00pm",
             "Fri & Sat 12:00pm - 11:00pm",
             "Sun - 12:00pm - 10:00pm"
-        ]
+        ],
+        link: "https://goo.gl/maps/HzQKjUXj9aC1ZDEd6"
     },
     {
         name: "Richmond Hill",
@@ -73,7 +73,8 @@ function createStore() {
             "Mon - Thurs 9:00am - 9:00pm",
             "Fri & Sat 9:00am - 11:00pm",
             "Sun - 9:00am - 10:00pm"
-        ]
+        ],
+        link: "https://goo.gl/maps/UxGkUrPZvJY7B8QGA"
     },
     {
         name: "Scarborugh - Midland",
@@ -81,7 +82,8 @@ function createStore() {
         tel: "(647) 349-8200",
         open: [
             "Daily - 12:00pm - 11:30pm"
-        ]
+        ],
+        link: "https://g.page/thealley-scarborough?share"
     },
     {
         name: "Toronto - Bloor",
@@ -90,7 +92,8 @@ function createStore() {
         open: [
             "Mon - Thurs 12:00pm - 9:00pm",
             "Fri - Sun 12:00pm - 10:00pm"
-        ]
+        ],
+        link: "https://goo.gl/maps/7tBW6UNVLLLH8GGHA"
     }
     ]
     // start of store section
@@ -127,6 +130,27 @@ function createStore() {
         storeNameLi.append(storeName);
         ul.append(storeNameLi);
 
+          // stor info label list
+        const infoLabelLi = document.createElement("li");
+        infoLabelLi.classList.add("info-label");
+
+        const addressLabel = document.createElement("p");
+        addressLabel.classList.add("address-label");
+        addressLabel.textContent = "ADDRESS:";
+        infoLabelLi.append(addressLabel);
+
+        const telLabel = document.createElement("p");
+        telLabel.classList.add("tel-label");
+        telLabel.textContent = "TEL:";
+        infoLabelLi.append(telLabel);
+
+        const openLabel = document.createElement("p");
+        openLabel.classList.add("open-label");
+        openLabel.textContent = "OPEN:";
+        infoLabelLi.append(openLabel);
+
+        ul.append(infoLabelLi);
+        
         // stor info list
         const storeInfoLi = document.createElement("li");
         storeInfoLi.classList.add("store-info");
@@ -153,7 +177,8 @@ function createStore() {
         const storeMapLi = document.createElement("li");
         storeMapLi.classList.add("store-map");
         const link = document.createElement("a");
-        link.setAttribute("href", "example");
+        link.setAttribute("href", store.link);
+        link.setAttribute("target", "_blank");
         const icon = document.createElement("img");
         icon.setAttribute("src", map);
         icon.setAttribute("alt", "google-map");
@@ -166,7 +191,7 @@ function createStore() {
 
         storeLi.append(li);
     });
-
+    
     return locationContainer;
 }
 
