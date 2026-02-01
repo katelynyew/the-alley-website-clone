@@ -4,7 +4,7 @@
 
 [Live Demo](https://katelynyew.github.io/the-alley-website-clone) | [View Code](https://github.com/katelynyew/)
 
-![Bubble Tea Store Preview](./public/assets/images/sc_home.png)
+![Bubble Tea Store Preview](./public/assets/images/home.png)
 
 ---
 
@@ -38,16 +38,16 @@ A pixel-perfect recreation of a commercial bubble tea store website featuring sm
 ##  Screenshots
 
 ### Home Section
-![Hero](./public/assets/images/sc_home.png)
+![Hero](./public/assets/images/home.png)
 
 ### Menu Section
-![Menu](./public/assets/images/sc_menu.png)
+![Menu](./public/assets/images/menu.png)
 
 ### Franchise Section
-![Franchise](./public/assets/images/sc_inquiry.png)
+![Franchise](./public/assets/images/inquiry.png)
 
 ### Store Section
-![Store](./public/assets/images/sc_store.png)
+![Store](./public/assets/images/store.png)
 
 ---
 
